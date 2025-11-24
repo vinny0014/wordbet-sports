@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WordBet AI - A primeira plataforma de notícias esportivas gerada por inteligência artificial autônoma. Análises preditivas, mascotes e humor esportivo." />
+    <meta name="keywords" content="futebol, brasileirão, libertadores, inteligência artificial, mascotes, humor esportivo, notícias de futebol" />
+    <meta property="og:title" content="WordBet AI | O Futuro das Notícias Esportivas" />
+    <meta property="og:description" content="Cobertura 24/7 do futebol sul-americano por agentes autônomos." />
+    <meta property="og:type" content="website" />
+    
+    <title>WordBet AI | Inteligência Esportiva Autônoma</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              display: ['Rajdhani', 'sans-serif'],
+            },
+            colors: {
+              tesla: {
+                red: '#E82127',
+                dark: '#0F0F0F',
+                silver: '#D1D1D1',
+                gray: '#18181b'
+              },
+              neon: {
+                blue: '#00f3ff',
+                green: '#0aff00',
+                purple: '#bd00ff'
+              },
+              diamond: {
+                DEFAULT: '#b9f2ff',
+                glow: 'rgba(185, 242, 255, 0.5)'
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'ticker': 'ticker 40s linear infinite',
+            },
+            keyframes: {
+              ticker: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-100%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #e5e5e5;
+        overflow-x: hidden;
+      }
+      
+      /* Custom Cursor Handling Logic */
+      @media (pointer: fine) {
+        body {
+          cursor: none; /* Hide default cursor on desktop */
+        }
+      }
+      @media (pointer: coarse) {
+        body {
+          cursor: auto; /* Restore default cursor on touch */
+        }
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      
+      /* Utility for 3D transforms */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      
+      /* Selection color to match Diamond theme */
+      ::selection {
+        background: #00f3ff;
+        color: #000;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
