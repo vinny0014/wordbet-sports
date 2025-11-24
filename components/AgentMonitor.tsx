@@ -11,8 +11,6 @@ const AgentMonitor: React.FC<AgentMonitorProps> = ({ logs, status }) => {
 
   useEffect(() => {
     if (containerRef.current) {
-      // Use scrollTop instead of scrollIntoView to prevent the main page from scrolling up
-      // when the monitor updates while the user is reading content further down the page.
       containerRef.current.scrollTop = containerRef.current.scrollHeight;
     }
   }, [logs]);
@@ -41,12 +39,11 @@ const AgentMonitor: React.FC<AgentMonitorProps> = ({ logs, status }) => {
             }`}>
               {log.agent}
             </span>
-            <span className="text-gray-300"> > {log.message}</span>
+            <span className="text-gray-300"> &gt; {log.message}</span>
           </div>
         ))}
       </div>
       
-      {/* Graphical Visualization of Nodes */}
       <div className="h-32 border-t border-white/10 relative overflow-hidden">
         <svg className="w-full h-full absolute inset-0 opacity-20">
             <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
