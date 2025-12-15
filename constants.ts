@@ -1,4 +1,5 @@
 import { Article, Mascot, Joke, AgentLog } from './types';
+import { MASCOT_IMAGES } from './utils/mascotImages';
 
 export const MOCK_ARTICLES: Article[] = [
   {
@@ -143,7 +144,7 @@ export const MOCK_MASCOTS: Mascot[] = [
     name: 'Mosqueteiro',
     team: 'Corinthians',
     description: 'Detectado alto nível de lealdade. Entidade baseada em combate histórico. Resistência a pressão da mídia: Infinita.',
-    imageUrl: 'https://i.pinimg.com/736x/2e/ae/06/2eae06880847681f5606614f06376389.jpg',
+    imageUrl: MASCOT_IMAGES['mosqueteiro'],
     powerLevel: 88,
     aggression: 92,
     memePotential: 95,
@@ -154,7 +155,7 @@ export const MOCK_MASCOTS: Mascot[] = [
     name: 'Porco Gobbato',
     team: 'Palmeiras',
     description: 'Organismo resiliente. Transformou um insulto histórico em fonte de poder nuclear e patrocínios milionários.',
-    imageUrl: 'https://i.pinimg.com/564x/6b/4c/58/6b4c58f8761240592637920453625906.jpg',
+    imageUrl: MASCOT_IMAGES['porco-cobbato'],
     powerLevel: 94,
     aggression: 85,
     memePotential: 80,
@@ -165,7 +166,7 @@ export const MOCK_MASCOTS: Mascot[] = [
     name: 'Urubu Rei',
     team: 'Flamengo',
     description: 'Predador aéreo de alta altitude. Controla as massas populares através de ondas sonoras no Maracanã.',
-    imageUrl: 'https://i.pinimg.com/564x/a2/cf/40/a2cf40a52b797a34a56472545366e374.jpg',
+    imageUrl: MASCOT_IMAGES['urubu-rei'],
     powerLevel: 96,
     aggression: 90,
     memePotential: 99,
@@ -176,7 +177,7 @@ export const MOCK_MASCOTS: Mascot[] = [
     name: 'Santo Paulo',
     team: 'São Paulo FC',
     description: 'Entidade teológica. Níveis de arrogância tática detectados, mas fundamentados em 3 mundiais. Estrutura óssea frágil.',
-    imageUrl: 'https://i.pinimg.com/564x/36/ea/9c/36ea9c36304965605561174553969130.jpg',
+    imageUrl: MASCOT_IMAGES['santo-paulo'],
     powerLevel: 85,
     aggression: 60,
     memePotential: 90,
@@ -187,11 +188,176 @@ export const MOCK_MASCOTS: Mascot[] = [
     name: 'Galo Doido',
     team: 'Atlético Mineiro',
     description: 'Níveis de adrenalina fora da escala. Entidade capaz de alterar o clima do estádio apenas com o olhar.',
-    imageUrl: 'https://i.pinimg.com/564x/0d/5d/6b/0d5d6b45107031798082812135016656.jpg',
+    imageUrl: MASCOT_IMAGES['galo-doido'],
     powerLevel: 93,
     aggression: 98,
     memePotential: 85,
     specialAbility: 'Bico de Aço: Destrói defesas retrancadas.'
+  },
+  {
+    id: '6',
+    name: 'Leão do Planalto',
+    team: 'Brasília',
+    description: 'Entidade majestática do cerrado. Poder de unificação regional em momentos críticos.',
+    imageUrl: MASCOT_IMAGES['leao-do-planalto'],
+    powerLevel: 82,
+    aggression: 75,
+    memePotential: 70,
+    specialAbility: 'Rugido do Cerrado: Mobiliza torcida inteira.'
+  },
+  {
+    id: '7',
+    name: 'Dragão da Amazônia',
+    team: 'Paysandu',
+    description: 'Criatura lendária das profundezas. Poder de ressurreição após períodos de dormência.',
+    imageUrl: MASCOT_IMAGES['dragao-da-amazonia'],
+    powerLevel: 89,
+    aggression: 88,
+    memePotential: 92,
+    specialAbility: 'Ressurreição Amazônica: Volta do zero para herói.'
+  },
+  {
+    id: '8',
+    name: 'Leão do Norte',
+    team: 'Sport',
+    description: 'Predador nordestino. Especialista em vitórias contra gigantes em clássicos regionais.',
+    imageUrl: MASCOT_IMAGES['leao-do-norte'],
+    powerLevel: 84,
+    aggression: 86,
+    memePotential: 88,
+    specialAbility: 'Clássico Nordestino: Bônus contra rivais regionais.'
+  },
+  {
+    id: '9',
+    name: 'Camisa Vermelha',
+    team: 'Internacional',
+    description: 'Símbolo de tradição gaúcha. Poder de coesão tática incomparável.',
+    imageUrl: MASCOT_IMAGES['camisa-vermelha'],
+    powerLevel: 87,
+    aggression: 82,
+    memePotential: 75,
+    specialAbility: 'Tradição Gaúcha: Eficiência em clássicos.'
+  },
+  {
+    id: '10',
+    name: 'Gremista',
+    team: 'Grêmio',
+    description: 'Entidade azul de Porto Alegre. Poder de ressurreição após crises financeiras.',
+    imageUrl: MASCOT_IMAGES['gremista'],
+    powerLevel: 86,
+    aggression: 80,
+    memePotential: 78,
+    specialAbility: 'Ressurreição Tricolor: Volta da crise para glória.'
+  },
+  {
+    id: '11',
+    name: 'Águia Real',
+    team: 'Real Madrid',
+    description: 'Símbolo de poder europeu. Entidade com 15 títulos de Champions League.',
+    imageUrl: MASCOT_IMAGES['real-madrid-eagle'],
+    powerLevel: 99,
+    aggression: 95,
+    memePotential: 85,
+    specialAbility: 'Sorte Merengue: Vitória em momentos críticos.'
+  },
+  {
+    id: '12',
+    name: 'Blaugrana',
+    team: 'Barcelona',
+    description: 'Entidade catalã de futebol total. Poder de posse de bola hipnotizante.',
+    imageUrl: MASCOT_IMAGES['barcelona-blaugrana'],
+    powerLevel: 97,
+    aggression: 88,
+    memePotential: 90,
+    specialAbility: 'Tiki-Taka: Controle total do jogo.'
+  },
+  {
+    id: '13',
+    name: 'Águia Azul',
+    team: 'Manchester City',
+    description: 'Máquina de gols moderna. Poder de eficiência tática sem precedentes.',
+    imageUrl: MASCOT_IMAGES['manchester-city-eagle'],
+    powerLevel: 98,
+    aggression: 92,
+    memePotential: 80,
+    specialAbility: 'Máquina Pep: Eficiência tática máxima.'
+  },
+  {
+    id: '14',
+    name: 'Demônio Vermelho',
+    team: 'Manchester United',
+    description: 'Entidade lendária de Old Trafford. Poder de ressurreição após crises.',
+    imageUrl: MASCOT_IMAGES['manchester-united-red'],
+    powerLevel: 96,
+    aggression: 94,
+    memePotential: 88,
+    specialAbility: 'Espírito de Old Trafford: Ressurreição em clássicos.'
+  },
+  {
+    id: '15',
+    name: 'Fígado de Liverpool',
+    team: 'Liverpool',
+    description: 'Entidade de Anfield. Poder de mobilização de torcida incomparável.',
+    imageUrl: MASCOT_IMAGES['liverpool-liver'],
+    powerLevel: 95,
+    aggression: 90,
+    memePotential: 92,
+    specialAbility: 'Poder de Anfield: Torcida como 12º jogador.'
+  },
+  {
+    id: '16',
+    name: 'Leão Azul',
+    team: 'Chelsea',
+    description: 'Entidade de Stamford Bridge. Poder de defesa impenetrável.',
+    imageUrl: MASCOT_IMAGES['chelsea-lion'],
+    powerLevel: 94,
+    aggression: 87,
+    memePotential: 82,
+    specialAbility: 'Fortaleza de Stamford: Defesa intransponível.'
+  },
+  {
+    id: '17',
+    name: 'Canhão',
+    team: 'Arsenal',
+    description: 'Entidade histórica de Londres. Poder de precisão tática.',
+    imageUrl: MASCOT_IMAGES['arsenal-cannon'],
+    powerLevel: 93,
+    aggression: 85,
+    memePotential: 86,
+    specialAbility: 'Precisão Arsenal: Ataque cirúrgico.'
+  },
+  {
+    id: '18',
+    name: 'Flor de Lis',
+    team: 'Paris Saint-Germain',
+    description: 'Entidade parisiense de poder financeiro. Poder de contratações estelares.',
+    imageUrl: MASCOT_IMAGES['psg-fleur'],
+    powerLevel: 96,
+    aggression: 91,
+    memePotential: 87,
+    specialAbility: 'Poder Parisiense: Contratações de elite.'
+  },
+  {
+    id: '19',
+    name: 'Touro Preto',
+    team: 'Juventus',
+    description: 'Entidade italiana de tradição. Poder de consistência incomparável.',
+    imageUrl: MASCOT_IMAGES['juventus-bull'],
+    powerLevel: 95,
+    aggression: 89,
+    memePotential: 79,
+    specialAbility: 'Consistência Bianconera: Domínio italiano.'
+  },
+  {
+    id: '20',
+    name: 'Leão Bávaro',
+    team: 'Bayern Munich',
+    description: 'Entidade germânica de poder. Domínio da Bundesliga e Europa.',
+    imageUrl: MASCOT_IMAGES['bayern-lion'],
+    powerLevel: 97,
+    aggression: 93,
+    memePotential: 84,
+    specialAbility: 'Domínio Bávaro: Supremacia germânica.'
   }
 ];
 
