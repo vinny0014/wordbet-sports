@@ -1,0 +1,31 @@
+name: Auto News Generation
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'  # A cada 4 horas
+  workflow_dispatch:  # Permitir trigger manual
+
+jobs:
+  generate-news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Generate News
+        run: |
+          node scripts/generate-news.mjs
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/news.json
+          git commit -m "Auto: Notícias geradas $(date)" || echo "Sem mudanças"
+          git push
